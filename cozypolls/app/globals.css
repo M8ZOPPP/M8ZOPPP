@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif;
+  --accent-light: linear-gradient(90deg, #A1FFCE, #D0FFC2);
+  --accent-dark: #00F4E7;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  letter-spacing: -0.01em;
+}
+
+.theme-light {
+  background: #FAFAF6;
+  color: #2B2B2B;
+}
+.theme-dark {
+  background: #0C111D;
+  color: #F8FAFC;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+
+.segments button {
+  background: none;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.segments .active {
+  opacity: 1;
+  border-bottom: 2px solid #00F4E7;
+}
+
+.poll-card {
+  margin: 2rem 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(20px);
+  text-align: center;
+}
+
+.vote-buttons button {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.results {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.fab {
+  position: fixed;
+  bottom: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-light);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  color: #000;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.bottom-nav .create {
+  font-size: 2rem;
+}
+
+.notify {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 4px;
+  font-size: 0.6rem;
+}
+
+.theme-dark .fab {
+  background: var(--accent-dark);
+  color: #0C111D;
+}
+
+.theme-dark .bottom-nav {
+  background: rgba(0,0,0,0.3);
+}
